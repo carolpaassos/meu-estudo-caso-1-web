@@ -1,16 +1,171 @@
-# React + Vite
+# 📚 Estudo de Caso - Desenvolvimento Web e Mobile  
+Projeto desenvolvido como parte da avaliação de **Desenvolvimento de Aplicações Web e Mobile**, incluindo:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Aplicação **Web** construída com **React + Vite**
+- Aplicação **Mobile** construída com **React Native + Expo**
+- Consumo de API externa
+- Navegação entre telas
+- Testes automatizados com **Vitest + React Testing Library**
+- Deploy no **Vercel** (versão Web)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📁 Estrutura do Repositório
 
-## React Compiler
+```
+meu-estudo-caso-1/
+│
+├── web/        # Aplicação web em React
+│
+└── mobile/     # Aplicação mobile em React Native (Expo)
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# 🌐 **Aplicação Web (React + Vite)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tecnologias utilizadas
+- React 19
+- Vite
+- React Router DOM
+- Axios
+- React Bootstrap
+- Vitest
+- React Testing Library
+
+---
+
+# 📌 Funcionalidades da versão Web
+
+### ✔ Listagem de alunos  
+A tela inicial **consome dados da API** e exibe cards com:
+- nome  
+- matrícula  
+- botão “Ver detalhes”
+
+### ✔ Tela de detalhes  
+Exibe informações individuais do aluno:
+- nome  
+- matrícula  
+- turma  
+- curso  
+- id  
+
+### ✔ Rotas implementadas
+```
+/                → Lista de alunos
+/aluno/:id       → Detalhes de um aluno
+```
+
+### ✔ Testes automatizados
+Inclui testes para:
+- `AlunoCard`
+- `Home`
+
+Todos os testes utilizam:
+- **Vitest**
+- **React Testing Library**
+- mocks do `axios`
+
+---
+
+# 🧪 Como rodar o projeto Web
+
+```sh
+cd web
+npm install
+npm run dev
+```
+
+## ▶ Rodar os testes
+
+```sh
+npm test
+```
+
+---
+
+# 📱 Aplicação Mobile (React Native + Expo)
+
+## 🚀 Tecnologias utilizadas
+- Expo
+- React Native
+- Expo Router
+- Axios
+
+---
+
+# 📌 Funcionalidades da versão Mobile
+
+### ✔ Listagem de alunos  
+A tela principal consome a mesma API da versão Web e exibe cards com:
+- nome  
+- matrícula  
+- botão "Ver detalhes"
+
+### ✔ Tela de detalhes  
+Exibe informações completas de acordo com a API:
+- nome  
+- matrícula  
+- turma  
+- curso  
+- id
+
+### ✔ Navegação  
+Implementação utilizando **Expo Router**, com rotas:
+```
+/                    → Lista de alunos
+/aluno/[id].jsx      → Detalhes do aluno
+```
+
+---
+
+# 📱 Como rodar o projeto Mobile
+
+```sh
+cd mobile
+npm install
+npx expo start
+```
+
+Depois:
+- Pressione **a** para abrir no Android  
+- Pressione **w** para abrir no navegador  
+- Ou escaneie o QR code no terminal com o **Expo Go**
+
+---
+
+# 🔗 API Utilizada
+
+Os dados dos alunos são consumidos do endpoint:
+
+```
+https://proweb.leoproti.com.br/alunos
+```
+
+Exemplo do retorno:
+
+```json
+[
+  { "id": 224, "nome": "Pedro", "turma": null, "curso": null, "matricula": null },
+  { "id": 230, "nome": "Caio Perreira", "turma": null, "curso": null, "matricula": "2232" }
+]
+```
+
+---
+
+# 🔥 Deploy
+
+A aplicação Web foi publicada no **Vercel** e está disponível em:
+
+👉 **(adicione aqui o link quando publicarmos)**
+
+---
+
+# 👨‍💻 Autor
+
+**Carolina Ferreira Passos Pessoa**  
+Desenvolvedor Web & Mobile  
+Minas Gerais - Brasil
+
+---
