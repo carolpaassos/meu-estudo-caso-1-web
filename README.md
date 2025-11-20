@@ -158,7 +158,7 @@ Exemplo do retorno:
 
 A aplicação Web foi publicada no **Vercel** e está disponível em:
 
-👉 **(adicione aqui o link quando publicarmos)**
+👉 **https://meu-estudo-caso-1-web-fh1q.vercel.app/**
 
 ---
 
